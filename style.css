@@ -19,6 +19,7 @@ header{
     position: relative;
     width:99%;
     transition: 0.5s;
+ 
 }
 
 .Display{
@@ -43,7 +44,8 @@ header{
 }
 
 .logo{
-    width: 200px;
+    width: 130px;
+    margin-top: 20px;
 }
 
 
@@ -307,6 +309,8 @@ header{
 
 .dipcription{
     background-color: #32363E;
+    height: auto;
+    padding-bottom:50px ;
 }
 
 .dipcription h1{
@@ -411,6 +415,58 @@ article{
     text-shadow: 6px 7px 4px rgb(106, 106, 105);
     transform: rotate(-3deg);
 }
+
+footer{
+    background-color: #3e4450;
+}
+
+.footer{
+    background-color: #3e4450;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+footer h1{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    
+}
+
+.Contact-icon li{
+    list-style: none;
+    display: flex;
+    padding-top: 10px;
+}
+
+.Contact-icon img{
+
+    width: 20px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.social-icon img{
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+footer hr{
+    margin: auto;
+    width: 70%;
+    height: 2px;
+    background: white;
+    border-radius: 999px;
+    
+}
+
+footer p{
+    text-align: center;
+}
+
 
 
 

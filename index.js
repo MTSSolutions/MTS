@@ -17,13 +17,15 @@ function ScrollFunction(){
         document.getElementById("nav").style.marginRight = "50px";
         document.getElementById("search-icon-top").style.display = "flex";
         document.getElementById("search-icon-top").style.marginRight="200px";
-        document.getElementById("nivbar").style.opacity = "0.7"; 
+        document.getElementById("nivbar").style.opacity = "0.7";
+        
     }
     else{
+        
         document.getElementById("nivbar").style.padding = "0px";
         document.getElementById("nivbar").style.backgroundColor = "#45464600";
         document.getElementById("nivbar").style.marginRight = "10px";
-        document.getElementById("nivbar").style.height = "88px";
+        document.getElementById("nivbar").style.height = "120px";
         document.getElementById("logo").style.display = "flex";
         document.getElementById("signup-btn").style.display = "flex";
         document.getElementById("login").style.display = "flex";
