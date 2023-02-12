@@ -22,7 +22,6 @@ textBox.onkeyup =  (e)=>{
            allList[i].setAttribute("onclick","select(this)")
             
         }
-        let allSearch = sugBox.querySelectorAll("a");
         
     }else{
         searchBox.classList.remove("active");
@@ -48,3 +47,22 @@ function showSug(list){
 }
 
     
+function search(){
+    if(textBox.value == "Learn HTML" ||textBox.value == "learn HTML" ||textBox.value == "Learn html" ||textBox.value == "How to learn HTML"){
+    window.location.href = "https://mtssolutions.github.io/MTS/learnhtml.html";
+    }else if(textBox.value =="Atou"){
+        console.log("Atou");
+    }else{
+        alert("no result");
+    }
+}
+
+
+searchIcon.onclick = function(){search()}
+
+document.onkeydown = function(e){
+    if (e.keyCode === 13){
+        searchIcon.click();
+    }
+}
+

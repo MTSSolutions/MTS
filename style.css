@@ -259,7 +259,8 @@ header{
 
 
 
-.sug-box li:hover{
+.sug-box li:hover,
+.sug-box li:focus{
     opacity: 1;
     cursor:context-menu;
 }
@@ -314,8 +315,8 @@ header{
 }
 
 .dipcription h1{
-    padding-left: 350px;
-    padding-right: 350px;
+    padding-left: 250px;
+    padding-right: 250px;
     margin: 0;
     text-align: center;
     font-size: 60px;
@@ -372,18 +373,17 @@ article{
 .artical-summary{
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #1d2026;
     position: relative;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: auto;
     height: 250px;
     width: 230px;
     border-radius: 30px;
     box-shadow: 5px 10px 8px black;
     overflow: hidden;
-    transition: 0.5s
+    transition: 0.5s;
+    gap: 20px;
 }
 
 .artical-summary:hover{
@@ -401,7 +401,6 @@ article{
     font-size: 30px;
     position: absolute;
     color: azure;
-    padding: 30px;
     transition: 0.5s;
     cursor: pointer;
     text-shadow: 3px 5px 4px rgb(106, 106, 105);
@@ -409,12 +408,26 @@ article{
 }
 
 .artical-summary h1:hover{
+    color: aqua ;
     padding-top:50px;
     padding-bottom: 50px;
     font-size: 35px;
     text-shadow: 6px 7px 4px rgb(106, 106, 105);
     transform: rotate(-3deg);
 }
+
+.hover-aqua a{
+    text-decoration: none;
+    color: aliceblue;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+.hover-aqua a:hover{
+    color: aqua;
+}
+
+
 
 footer{
     background-color: #3e4450;

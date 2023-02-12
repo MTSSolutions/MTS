@@ -3,13 +3,19 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
 }
  
 
 
 article{
-    margin-top: 88px;
+    margin-top: 128px;
 }
+
+
 
 
 

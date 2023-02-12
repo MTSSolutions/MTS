@@ -8,4 +8,5 @@ let sug = [
     "How to become Web Designer",
     "web designer",
     "Web development",
+    "Learn HTML"
 ];
