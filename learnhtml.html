@@ -9,31 +9,30 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css" type="text/css">
         <link rel="stylesheet" href="learnhtml.css" type="text/css">
+        <link rel="stylesheet" media="screen and (max-width: 908px)" href="908-width-media.css">
         <title>MTS Solutions & Services</title>
         <link rel="icon" href="image/logo.png" type="image/x-icon">
 </head>
 <body>
-   <header class="Display justify-between margin " id="nivbar">
-    <div class="Display justify-center item " >
-        <a href="index.html"><img src="image/logo.png" class="logo" id="logo" alt="logo"></img></a>
-        <a href="index.html" class="header-text-margin header-padding margin-left-40 decoration-none text-white animation " id="navtext">Home</a>
-        <a href="menu.html" class="header-text-margin header-padding decoration-none text-white animation"  id="navtex" >Menu</a>
-        <a href="" class="header-text-margin header-padding decoration-none text-white animation"  id="navte" >Menu</a>
-        <a href="" class="header-text-margin header-padding decoration-none text-white animation"  id="navt">Menu</a>
-        <a href="" class="header-text-margin header-padding decoration-none text-white animation"  id="nav">Service</a>
-        <a href="" class="header-text-margin header-padding decoration-none text-white animation"  id="na ">Store</a>
-        
-         
-        <script src="index.js"></script>
-       </div>
-    <div class="Display justify-center item" >
+   <header class="header Display justify-between margin  none-long" id="nivbar">
      
-      <div class="icon" id="search-icon-top" ><img  src="image/icon/search-icon.svg" alt="logo"></div>
-        <a href="" class="header-text-margin header-padding decoration-none text-white animation" id="login" >Login</a>
-        <button class="button" id = "signup-btn" ><a class="decoration-none text-aqua" href="">Sign up</a></button>
-    </div> 
-   </header>
-   <div class="gap"></div>
+      <div class="Display justify-center item  none-long" >
+          <img src="image/logo.png" class="logo" id="logo" alt="logo"></img>
+          <div id="nivbar-line-one" class="nivbar-line-one"><a href="" class="home header-text-margin header-padding margin-left-40 decoration-none text-white animation none-long  " id="navtext">Home</a>
+          <a href="menu.html" class="header-text-margin header-padding decoration-none text-white animation none-long"  id="navtex" >Menu</a>
+          <a href="" class="header-text-margin header-padding decoration-none text-white animation none-long "  id="navte" >Menu</a>
+          <a href="" class="header-text-margin header-padding decoration-none text-white animation none-long"  id="navt">Menu</a>
+          <a href="" class="header-text-margin header-padding decoration-none text-white animation none-long"  id="nav">Service</a>
+          <a href="" class="header-text-margin header-padding decoration-none text-white animation none-long"  id="na ">Store</a>
+          </div>
+         </div>
+    
+        
+        <img class="icon-arrow" id="icon-arrow" src="image/icon/arrow-icon.svg" alt="">
+     <img class="icon-close" id="icon-close" src="image/icon/close-icon.svg" alt="">
+    <img class="icon-menu" id="icon-menu" src="image/icon/menu-icon.svg" alt="">  
+     </header>
+  
 
    
    <section> 
@@ -157,15 +156,118 @@
    <script src="sug.js"></script>
    <script src="search-animation.js"></script>
    <script>
-      const SIcon = document.getElementById("search-icon-top");
+       
+   function myScrolling(x){
+if(x.matches){
+    window.onscroll = function() {ScrollFunction()};
+}else{
+    window.onscroll = function( ){MobileScrolling()};
+}
+    }
 
-      SIcon.onclick = function(){topFunction()}
+const myscrol = window.matchMedia("(min-width: 908px)")
 
-      function topFunction() {
-         document.body.scrollTop = 0;
-         document.documentElement.scrollTop = 0;
+myScrolling(myscrol);
+
+myscrol.addListener(myScrolling)
+
+   
+
+      function ScrollFunction(){
+          if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+              document.getElementById("nivbar").style.padding = "12px";
+              document.getElementById("nivbar").style.fontSize = " 15px";
+              document.getElementById("nivbar").style.backgroundColor = "black"; 
+              document.getElementById("nivbar").style.height = "30px";
+              document.getElementById("logo").style.display = "none";
+              document.getElementById("nivbar").style.paddingLeft = "100px";
+              document.getElementById("navtext").style.marginRight = "50px";
+              document.getElementById("navtex").style.marginRight = "50px";
+              document.getElementById("navte").style.marginRight = "50px";
+              document.getElementById("navt").style.marginRight = "50px";
+              document.getElementById("nav").style.marginRight = "50px";
+              document.getElementById("nivbar").style.opacity = "0.7";
+              
+          }
+          else{
+              document.getElementById("nivbar").style.padding = "0px";
+              document.getElementById("nivbar").style.backgroundColor = "#45464600";
+              document.getElementById("nivbar").style.marginRight = "10px";
+              document.getElementById("nivbar").style.height = "120px";
+              document.getElementById("logo").style.display = "flex";
+              document.getElementById("nivbar").style.paddingLeft = "0px";
+              document.getElementById("navtext").style.marginRight = "0px";
+              document.getElementById("navtex").style.marginRight = "0px";
+              document.getElementById("navte").style.marginRight = "0px";
+              document.getElementById("navt").style.marginRight = "0px";
+              document.getElementById("nav").style.marginRight = "0px";
+              document.getElementById("nivbar").style.opacity = "1";
+              
+      }
       }
 
+      function MobileScrolling(){
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        document.getElementById("logo").style.display = "none";
+        document.getElementById("nivbar").style.backgroundColor = "white";
+        document.getElementById("nivbar").style.height = "60px";
+        document.getElementById("icon-close").style.display = "none";
+        document.getElementById("icon-menu").style.display = "none";
+        document.getElementById("nivbar").style.overflow = "hidden";
+        document.getElementById("nivbar-line-one").style.display = "none";
+        document.getElementById("nivbar").style.opacity = "0.4";       
+        document.getElementById("icon-arrow").style.display = "block";
+    }
+    else{
+        document.getElementById("logo").style.display = "";
+        document.getElementById("nivbar").style.backgroundColor = "#45464600";
+        document.getElementById("nivbar").style.height = "135px";
+        document.getElementById("icon-close").style.display = "none";
+        document.getElementById("icon-menu").style.display = "block";
+        document.getElementById("nivbar").style.overflow = "hidden";
+        document.getElementById("nivbar-line-one").style.display = "block";
+        document.getElementById("nivbar").style.opacity = "1";    
+        document.getElementById("icon-arrow").style.display = "none";
+    }
+}
+
+
+
+
+
+      let menuIcon = document.getElementById("icon-menu");
+      let navbar = document.getElementById("nivbar");
+      let closeIcon = document.getElementById("icon-close");
+      let whiteMenuIcon = document.getElementById("icon-arrow");
+
+      menuIcon.onclick = function(){menuBoxOpen()}
+      closeIcon.onclick = function(){menuBoxClose()}
+
+      function menuBoxOpen(){
+         navbar.style.overflow = "visible";
+         menuIcon.style.display = "none";
+         closeIcon.style.display = "block";
+         whiteMenuIcon.style.display = "none";         
+      }
+
+      function menuBoxClose(){
+         navbar.style.overflow = "hidden";
+         menuIcon.style.display = "block";
+         closeIcon.style.display = "none";
+     
+      }
+
+      whiteMenuIcon.onclick = function(){topAndMenuactive()}
+      
+      
+
+      function topAndMenuactive(){
+         document.body.scrollTop = 39;
+         document.documentElement.scrollTop = 39;
+        
+        
+         
+      }
    </script>
 
 </body>

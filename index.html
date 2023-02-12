@@ -8,31 +8,36 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" media="screen and (max-width: 908px)" href="908-width-media.css">
         <title>MTS</title>
         <link rel="icon" type="image/x-icon" href="image/logo.png">
 </head>
 <body>
-   <header class="Display justify-between margin " id="nivbar">
-    <div class="Display justify-center item " >
+   
+   <header class="Display justify-between margin  none-long" id="nivbar">
+     
+    <div class="Display justify-center item  none-long" >
         <img src="image/logo.png" class="logo" id="logo" alt="logo"></img>
-        <a href="" class="header-text-margin header-padding margin-left-40 decoration-none text-white animation " id="navtext">Home</a>
-        <a href="menu.html" class="header-text-margin header-padding decoration-none text-white animation"  id="navtex" >Menu</a>
-        <a href="" class="header-text-margin header-padding decoration-none text-white animation"  id="navte" >Menu</a>
-        <a href="" class="header-text-margin header-padding decoration-none text-white animation"  id="navt">Menu</a>
-        <a href="" class="header-text-margin header-padding decoration-none text-white animation"  id="nav">Service</a>
-        <a href="" class="header-text-margin header-padding decoration-none text-white animation"  id="na ">Store</a>
-        
-         
-        <script src="index.js"></script>
+        <div id="nivbar-line-one" class="nivbar-line-one"><a href="" class="home header-text-margin header-padding margin-left-40 decoration-none text-white animation none-long  " id="navtext">Home</a>
+        <a href="menu.html" class="header-text-margin header-padding decoration-none text-white animation none-long"  id="navtex" >Menu</a>
+        <a href="" class="header-text-margin header-padding decoration-none text-white animation none-long "  id="navte" >Menu</a>
+        <a href="" class="header-text-margin header-padding decoration-none text-white animation none-long"  id="navt">Menu</a>
+        <a href="" class="header-text-margin header-padding decoration-none text-white animation none-long"  id="nav">Service</a>
+        <a href="" class="header-text-margin header-padding decoration-none text-white animation none-long"  id="na ">Store</a>
+        </div>
        </div>
-    <div class="Display justify-center item" >
+    <div class="Display justify-center item none-long niv-line-two" id="niv-line-two">
      
       <div class="icon" id="search-icon-top" ><img  src="image/icon/search-icon.svg" alt="logo"></div>
-        <a href="" class="header-text-margin header-padding decoration-none text-white animation" id="login" >Login</a>
-        <button class="button" id = "signup-btn" ><a class="decoration-none text-aqua" href="#">Sign up</a></button>
-    </div> 
+        <a href="" class="login header-text-margin header-padding decoration-none text-white animation none-long " id="login" >Login</a>
+        <button class="button" id = "signup-btn" ><a class="decoration-none text-aqua none-long" href="https://www.figma.com/file/GLljRnn3SWkIeu74wH3LGI/Untitled?t=JB9XAjWJGUSp2knI-0">Sign up</a></button>
+      </div>
+  
+      
+      <img class="icon-arrow" id="icon-arrow" src="image/icon/arrow-icon.svg" alt="">
+   <img class="icon-close" id="icon-close" src="image/icon/close-icon.svg" alt="">
+  <img class="icon-menu" id="icon-menu" src="image/icon/menu-icon.svg" alt="">  
    </header>
-   <div class="gap"></div>
 
    
    <section> 
@@ -127,7 +132,7 @@
         <hr>
         <p>© MTS Solution & Service Created by MTS team 2023. All Rights Reserved.</p>
       </footer>
-      
+   <script src="index.js"></script>
    <script src="sug.js"></script>
    <script src="search-animation.js"></script>
    <script>
@@ -138,8 +143,46 @@
       function topFunction() {
          document.body.scrollTop = 0;
          document.documentElement.scrollTop = 0;
+
       }
 
+      let menuIcon = document.getElementById("icon-menu");
+      let navbar = document.getElementById("nivbar");
+      let closeIcon = document.getElementById("icon-close");
+      let whiteMenuIcon = document.getElementById("icon-arrow");
+
+      menuIcon.onclick = function(){menuBoxOpen()}
+      closeIcon.onclick = function(){menuBoxClose()}
+
+      function menuBoxOpen(){
+         navbar.style.overflow = "visible";
+         menuIcon.style.display = "none";
+         closeIcon.style.display = "block";
+         whiteMenuIcon.style.display = "none";         
+      }
+
+      function menuBoxClose(){
+         navbar.style.overflow = "hidden";
+         menuIcon.style.display = "block";
+         closeIcon.style.display = "none";
+     
+      }
+
+      whiteMenuIcon.onclick = function(){topAndMenuactive()}
+      
+      
+
+      function topAndMenuactive(){
+         document.body.scrollTop = 39;
+         document.documentElement.scrollTop = 39;
+        
+        
+         
+      }
+
+    
+
+      
    </script>
 
 </body>

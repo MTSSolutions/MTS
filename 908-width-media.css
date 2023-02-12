@@ -1,0 +1,67 @@
+.none-long{
+    display: block;    
+}
+
+.icon-menu{
+    top: 0;
+    right: 0;
+    margin: 25px;
+    width: 75px;
+
+}
+
+.icon-arrow{
+    display: block;
+    fill: aliceblue;
+
+
+}
+
+
+.home{
+    margin-left: 9px;
+}
+
+.login{
+    margin-bottom: 6px;
+    text-align: center;
+    margin-right: 0;
+    
+}
+
+.nivbar-line-one{
+    position: absolute;
+    right: 0;
+}
+
+.niv-line-two{
+    position: absolute;
+    
+    right: 0;
+    bottom: -350px;
+}
+
+
+
+header{
+    height: 135px;
+    
+}
+
+.icon-close{
+    position: absolute;
+    width: 75px;
+    right: 25px;
+    top:26px;
+    display:none;
+}
+
+.dipcription h1{
+    padding: 0;
+}
+
+.dipcription p{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+}

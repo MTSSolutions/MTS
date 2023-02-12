@@ -1,4 +1,17 @@
-window.onscroll = function() {ScrollFunction()};
+function myScrolling(x){
+if(x.matches){
+    window.onscroll = function() {ScrollFunction()};
+}else{
+    window.onscroll = function( ){MobileScrolling()}
+}
+    }
+
+const myscrol = window.matchMedia("(min-width: 908px)")
+
+myScrolling(myscrol);
+
+myscrol.addListener(myScrolling)
+
 
 function ScrollFunction(){
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
@@ -18,6 +31,7 @@ function ScrollFunction(){
         document.getElementById("search-icon-top").style.display = "flex";
         document.getElementById("search-icon-top").style.marginRight="200px";
         document.getElementById("nivbar").style.opacity = "0.7";
+
         
     }
     else{
@@ -37,7 +51,36 @@ function ScrollFunction(){
         document.getElementById("nav").style.marginRight = "0px";
         document.getElementById("nivbar").style.opacity = "1";
         document.getElementById("search-icon-top").style.display = "none";
+        document.getElementById("niv-line-two").style.display = "flex";
+
 }
+}
+
+function MobileScrolling(){
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        document.getElementById("logo").style.display = "none";
+        document.getElementById("nivbar").style.backgroundColor = "white";
+        document.getElementById("nivbar").style.height = "60px";
+        document.getElementById("icon-close").style.display = "none";
+        document.getElementById("icon-menu").style.display = "none";
+        document.getElementById("nivbar").style.overflow = "hidden";
+        document.getElementById("nivbar-line-one").style.display = "none";
+        document.getElementById("niv-line-two").style.display = "none";
+        document.getElementById("nivbar").style.opacity = "0.4";       
+        document.getElementById("icon-arrow").style.display = "block";
+    }
+    else{
+        document.getElementById("logo").style.display = "";
+        document.getElementById("nivbar").style.backgroundColor = "#45464600";
+        document.getElementById("nivbar").style.height = "135px";
+        document.getElementById("icon-close").style.display = "none";
+        document.getElementById("icon-menu").style.display = "block";
+        document.getElementById("nivbar").style.overflow = "hidden";
+        document.getElementById("nivbar-line-one").style.display = "block";
+        document.getElementById("niv-line-two").style.display = "block";
+        document.getElementById("nivbar").style.opacity = "1";    
+        document.getElementById("icon-arrow").style.display = "none";
+    }
 }
 
 
