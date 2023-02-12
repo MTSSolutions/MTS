@@ -49,7 +49,7 @@ function showSug(list){
     
 function search(){
     if(textBox.value == "Learn HTML" ||textBox.value == "learn HTML" ||textBox.value == "Learn html" ||textBox.value == "How to learn HTML"){
-    window.location.href = "https://mtssolutions.github.io/MTS/learnhtml.html";
+    window.location.href = "https://mtssolutionsandservices.github.io/MTS/learnhtml.html";
     }else if(textBox.value =="Atou"){
         console.log("Atou");
     }else{
